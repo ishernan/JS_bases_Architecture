@@ -1,0 +1,29 @@
+{
+  "name": "js-bases",
+  "version": "1.0.0",
+  "description": "Bases de JS",
+  "main": "bundle.js",
+  "scripts": {
+    "webpack:dev": "./node_modules/.bin/webpack --watch",
+    "webpack:build": "./node_modules/.bin/webpack",
+    "start": "./node_modules/.bin/webpack && ./node_modules/http-server/bin/http-server -c-1 -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JS",
+    "Webpack",
+    "Babel"
+  ],
+  "author": "Aélion <jean-luc.aubert@aelion.fr>",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.0.0",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-loader": "^8.2.3"
+  }
+}
