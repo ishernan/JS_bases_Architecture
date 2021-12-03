@@ -19,18 +19,22 @@ div.outer-splash {
     left: 0;
     width: 100%;
     height: 100px;
-   background-color: rgb(245, 245, 143, .5);
+    background-color: rgb(245, 245, 143, .5);
 }
 
 div.inner-splash {
     position: relative;
     width: 498px;
     height: 328px;
-    margin-top: 0;
     margin-bottom: 0;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
     top: 50%;
     transform: translateY(-50%);
 
+}
+
+div.outer-splash.hidden {
+    display: none;
 }
