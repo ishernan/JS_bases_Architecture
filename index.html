@@ -4,13 +4,37 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-        <title>
-            Hello JS
-        </title>
+        <title>Hello JS</title>
+
+        <style>
+            div {
+                background-color: aqua;
+                width: 10em;
+            }
+
+            li.is-red {
+                color: red;                 ;
+            }
+            li.is-green {
+                color: rgb(23, 163, 86);                 ;
+            }
+        </style>
     </head>
 
     <body>
-        <div appDock class="container fluid"></div>
+       
+        <div appDock class="container fluid"></div> <!-- ça c'est un objet -->
+
+        <div>
+            <button id="red-one" attr-name='Isaac'>
+                First select
+            </button>
+            <button id="green-one" attr-name='Nesibe'>
+                Second select
+            </button>
+        </div>
+
+
 
         <!-- Here goes script -->
         <script src="./dist/bundle.js" charset="utf-8"></script>
