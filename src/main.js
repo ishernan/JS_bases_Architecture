@@ -1,22 +1,33 @@
 import { Contact } from "./models/contact";
+import { ContactService } from "./services/contact-service";
 import { RowHelper } from "./_helpers/row-helper";
 
 document.addEventListener('DOMContentLoaded', (e) => {
-    const contact = new Contact()
-    contact.setLastName('Aubert')
-    contact.setFirstName('Jean-Luc')
-    contact.setOccupation('Teacher')
-    contact.setCompany('Aélion')
+    const service = new ContactService()
 
-    const row = new RowHelper()
-    row.addColumn('&nbsp;')
-    row.addColumn(contact.getLastName())
-    row.addColumn(contact.getFirstName())
-    row.addColumn(contact.getOccupation())
-    row.addColumn(contact.getCompany())
-    row.addColumn('&nbsp;')
+    const contacts = service.findAll()
+    for (let contact of contacts) {
+        const row = new RowHelper()
+        row.addColumn('&nbsp;')
+        row.addColumn(contact.getLastName())
+        row.addColumn(contact.getFirstName())
+        row.addColumn(contact.getOccupation())
+        row.addColumn(contact.getCompany())
+        row.addColumn('&nbsp;')
 
-    document.querySelector('tbody').appendChild(row.buildRow())
+        document.querySelector('tbody').appendChild(row.buildRow())
+
+
+    }
+
+    // const contact = new Contact()
+    // contact.setLastName('Aubert')
+    // contact.setFirstName('Jean-Luc')
+    // contact.setOccupation('Teacher')
+    // contact.setCompany('Aélion')
+
+   
+
 
 
     // // 1. create a new tr element 

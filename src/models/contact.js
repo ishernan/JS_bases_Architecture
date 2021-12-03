@@ -2,7 +2,7 @@ export class Contact {
 
     constructor() {
         this.lastName = ''
-        this.firstname = ''
+        this.firstName = ''
         this.occupation = ''
         this.company = ''
 
@@ -20,13 +20,13 @@ export class Contact {
     }
 
     setFirstName(firstname) {
-        this.firstname = firstname
+        this.firstName = firstname
         return this.firstname
         
     }
 
     getFirstName() {
-        return this.firstname
+        return this.firstName
         
     }
     setOccupation(occupation) {
@@ -50,6 +50,12 @@ export class Contact {
     getCompany() {
         return this.company
         
+    }
+
+    deserialize(backendDatas) {
+        Object.assign(this, backendDatas)
+
+        return this 
     }
 
 }
